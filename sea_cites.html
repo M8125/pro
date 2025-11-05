@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Cities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="sea_cites.css">
+    <link rel="shortcut icon" href="logo.png.jpg" type="image/x-icon">
+  
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="logo.png.jpg"  style="float:left;"  height="100" width="150"/>
+            <div class="container">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html" >Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sea_cites.html" >Sea Cities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="map.html" >Map</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html" >About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <div class="search-filter-container">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search Beaches..." id="searchInput">
+                            <button onclick="searchBeaches()">Search</button>
+                        </div>
+                    </div>
+                    <a class="nav-link" href="index.html" class="btn btn-primary" >Logout</a> 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="cities">
+        <h2>Indian Beaches</h2>
+        <div class="beach-card" onclick="location.href='goa.html'">Goa Beaches</div>
+        <div class="beach-card" onclick="location.href='andaman.html'"> Andaman & Nicobar Beaches</div>
+        <div class="beach-card" onclick="location.href='kerala.html'">Kerala Beaches</div>
+        <div class="beach-card" onclick="location.href='laskshadeep.html'">Lakshadweep Beaches</div>
+        <div class="beach-card" onclick="location.href='tamil_nadu.html'">Tamilnadu Beaches</div>
+        <div class="beach-card" onclick="location.href='westbengal.html'">Westbengal Beaches</div>
+        <div class="beach-card" onclick="location.href='marine.html'">Marine Beaches</div>
+        <div class="beach-card" onclick="location.href='juhu.html'">Juhu Beaches</div>
+       
+    </section>
+
+    <script>
+        function searchBeaches() {
+            var searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (searchQuery === 'goa') {
+                window.location.href = 'goa.html';
+            } else if (searchQuery === 'andaman') {
+                window.location.href = 'andaman.html';
+            } else if (searchQuery === 'kerala') {
+                window.location.href = 'kerala.html';
+            } else if (searchQuery === 'lakshadweep') {
+                window.location.href = 'lakshadweep.html';
+            } else if (searchQuery === 'tamilnadu') {
+                window.location.href = 'tamil_nadu.html';
+            } else if (searchQuery === 'westbengal') {
+                window.location.href = 'westbengal.html';
+            } else if (searchQuery === 'marine') {
+                window.location.href = 'marine.html';
+            } else if (searchQuery === 'juhu') {
+                window.location.href = 'juhu.html';
+            } else {
+                alert('No matching beaches found.');
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login & Signup</title>
+    <link rel="stylesheet" href="login_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Replaced Firebase client with local fetch-based auth (see auth.js) -->
+    <!-- auth.js will handle signup/login by calling /api/auth on the server -->
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <div class="form-box login">
+                <h2><i class="fas fa-user-circle"></i> Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" class="toggle-form">Sign Up</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box signup">
+                <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <input type="text" id="signupUsername" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="signupEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupConfirmPassword" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" class="toggle-form">Login</a></p>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-568522459%3A1743908139112926" class="google" title="Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-form').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.form-container').classList.toggle('show-signup');
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login & Signup</title>
+    <link rel="stylesheet" href="login_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Replaced Firebase client with local fetch-based auth (see auth.js) -->
+    <!-- auth.js will handle signup/login by calling /api/auth on the server -->
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <div class="form-box login">
+                <h2><i class="fas fa-user-circle"></i> Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" class="toggle-form">Sign Up</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box signup">
+                <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <input type="text" id="signupUsername" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="signupEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupConfirmPassword" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" class="toggle-form">Login</a></p>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-568522459%3A1743908139112926" class="google" title="Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-form').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.form-container').classList.toggle('show-signup');
+            });
+        });
+    </script>
+</body>
+</html>
